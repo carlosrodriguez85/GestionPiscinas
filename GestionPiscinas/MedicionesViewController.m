@@ -45,7 +45,7 @@
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaMedicion" forIndexPath:indexPath];
     Medicion* medicion = [self.piscina.mediciones objectAtIndex:indexPath.row];
     
-    cell.textLabel.text = [medicion.fecha description]; //por ahora utilizamos el método description, pero luego será un NSDateFormatter. Esto es simplemente para no complicar el código más.
+    cell.textLabel.text = [NSDateFormatter localizedStringFromDate:medicion.fecha dateStyle:NSDateFormatterFullStyle timeStyle:NSDateFormatterShortStyle];
     
     return cell;
 }
