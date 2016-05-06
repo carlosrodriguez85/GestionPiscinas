@@ -13,6 +13,7 @@
 		8E4CF6A51C96DE6E008C68C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A41C96DE6E008C68C9 /* Assets.xcassets */; };
 		8E4CF6A81C96DE6E008C68C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A61C96DE6E008C68C9 /* LaunchScreen.storyboard */; };
 		8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */; };
+		8EC2830B1C96E8F4006A242D /* MedicionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		8E4CF6A91C96DE6E008C68C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E8E67B11C96E62C000B04A8 /* PiscinasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiscinasViewController.h; sourceTree = "<group>"; };
 		8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiscinasViewController.m; sourceTree = "<group>"; };
+		8EC283091C96E8F4006A242D /* MedicionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicionesViewController.h; sourceTree = "<group>"; };
+		8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicionesViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				8E4CF69C1C96DE6E008C68C9 /* AppDelegate.m */,
 				8E8E67B11C96E62C000B04A8 /* PiscinasViewController.h */,
 				8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */,
+				8EC283091C96E8F4006A242D /* MedicionesViewController.h */,
+				8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */,
 				8E4CF6A11C96DE6E008C68C9 /* Main.storyboard */,
 				8E4CF6A41C96DE6E008C68C9 /* Assets.xcassets */,
 				8E4CF6A61C96DE6E008C68C9 /* LaunchScreen.storyboard */,
@@ -149,6 +154,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC2830B1C96E8F4006A242D /* MedicionesViewController.m in Sources */,
 				8E4CF69D1C96DE6E008C68C9 /* AppDelegate.m in Sources */,
 				8E4CF69A1C96DE6E008C68C9 /* main.m in Sources */,
 				8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */,
