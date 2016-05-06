@@ -6,9 +6,9 @@
 //  Copyright © 2016 Carlos Rodríguez Domínguez. All rights reserved.
 //
 
-#import "GestorDatosVolatil.h"
+#import "LocalMemoryDataSource.h"
 
-@implementation GestorDatosVolatil
+@implementation LocalMemoryDataSource
 
 static NSMutableArray* piscinas = nil;
 

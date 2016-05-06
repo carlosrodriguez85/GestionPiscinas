@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GestorDatos.h"
+#import "DataSource.h"
 
-@interface GestorDatosVolatil : NSObject<GestorDatos>
+@interface LocalMemoryDataSource : NSObject<DataSource>
 
 @end

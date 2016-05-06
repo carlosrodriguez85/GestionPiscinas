@@ -1,5 +1,5 @@
 //
-//  GestorDatos.h
+//  DataSource.h
 //  GestionPiscinas
 //
 //  Created by Carlos Rodríguez Domínguez on 14/3/16.
@@ -11,7 +11,7 @@
 #import "Medicion.h"
 #import "ParametrosMedicion.h"
 
-@protocol GestorDatos <NSObject>
+@protocol DataSource <NSObject>
 
 +(Piscina*)agregarPiscina:(NSString*)nombre;
 +(void)actualizarPiscina:(Piscina*)piscina;
