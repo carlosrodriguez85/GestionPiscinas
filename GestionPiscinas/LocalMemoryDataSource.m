@@ -16,6 +16,8 @@
 
 @implementation LocalMemoryDataSource //aún falta por implementar el sharedInstance
 
+static LocalMemoryDataSource* dataSource = nil;
+
 -(instancetype)init
 {
     self = [super init];
@@ -24,6 +26,15 @@
     }
     
     return self;
+}
+
++(instancetype)sharedInstance
+{
+    if (dataSource == nil){
+        dataSource = [[LocalMemoryDataSource alloc] init];
+    }
+    
+    return dataSource;
 }
 
 -(Piscina *)agregarPiscina:(NSString *)nombre
