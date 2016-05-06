@@ -7,6 +7,7 @@
 //
 
 #import "PiscinasViewController.h"
+#import "GestorDatosVolatil.h"
 
 @interface PiscinasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -35,12 +36,18 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    NSArray* piscinas = [GestorDatosVolatil obtenerPiscinas];
+    return piscinas.count;
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaPiscina" forIndexPath:indexPath];
+    
+    NSArray* piscinas = [GestorDatosVolatil obtenerPiscinas];
+    Piscina* piscina = [piscinas objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = piscina.nombre;
     
     return cell;
 }
@@ -56,7 +63,10 @@
 */
 
 - (IBAction)pulsarAgregarPiscina:(id)sender {
+    NSString* nombrePiscina = @"Pepito"; //esto lo cambiaremos para que lo coja de un UIAlertController
+    Piscina* nuevaPiscina = [GestorDatosVolatil agregarPiscina:nombrePiscina]; //me da un warning, porque no estoy utilizando el objeto nuevaPiscina dentro de este método, pero me ignoro dicho warning
     
+    [self.tableView reloadData];
 }
 
 @end
