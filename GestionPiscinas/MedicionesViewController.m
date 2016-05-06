@@ -20,6 +20,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    self.title = self.piscina.nombre; //con self.title cambiamos el titulo que aparece arriba en el NavigationController.
 }
 
 - (void)didReceiveMemoryWarning {
