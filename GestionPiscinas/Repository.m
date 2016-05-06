@@ -7,10 +7,11 @@
 //
 
 #import "Repository.h"
+#import "LocalMemoryDataSource.h"
 
 @implementation Repository
 
-//en swift: class lazy var repository = Repository()
+//en swift: class var repository = Repository()
 
 static Repository* repository = nil;
 
@@ -25,6 +26,30 @@ static Repository* repository = nil;
     }
     
     return repository;
+}
+
+-(Piscina*)agregarPiscina:(NSString*)nombre
+{
+    Piscina* nuevaPiscina = [[LocalMemoryDataSource sharedInstance] agregarPiscina:nombre];
+    
+    return nuevaPiscina;
+}
+
+-(void)actualizarPiscina:(Piscina*)piscina
+{
+    [[LocalMemoryDataSource sharedInstance] actualizarPiscina:piscina];
+}
+
+-(void)eliminarPiscina:(Piscina*)piscina
+{
+    [[LocalMemoryDataSource sharedInstance] eliminarPiscina:piscina];
+}
+
+-(NSArray*)obtenerPiscinas
+{
+    NSArray* piscinas = [[LocalMemoryDataSource sharedInstance] obtenerPiscinas];
+    
+    return piscinas;
 }
 
 @end

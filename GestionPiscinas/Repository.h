@@ -7,9 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Piscina.h"
 
 @interface Repository : NSObject
 
 +(Repository*) sharedInstance; //sharedRepository, defaultRepository, singleton, etc.
+
+-(Piscina*)agregarPiscina:(NSString*)nombre;
+-(void)actualizarPiscina:(Piscina*)piscina;
+-(void)eliminarPiscina:(Piscina*)piscina;
+-(NSArray*)obtenerPiscinas;
 
 @end
