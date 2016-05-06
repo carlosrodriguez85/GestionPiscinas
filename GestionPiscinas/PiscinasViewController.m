@@ -63,11 +63,24 @@
 */
 
 - (IBAction)pulsarAgregarPiscina:(id)sender {
-    NSString* nombrePiscina = @"Pepito"; //esto lo cambiaremos para que lo coja de un UIAlertController
-    Piscina* nuevaPiscina = [[Repository sharedInstance] agregarPiscina:nombrePiscina]; //me da un warning, porque no estoy utilizando el objeto nuevaPiscina dentro de este método, pero me ignoro dicho warning.
-        //reemplazamos el localmemorydatasource por repository para evitar que los view controllers trabajen directamente sobre los datasources, puesto que ese trabajo requiere una gestión muy amplia
+    //pedimos el nombre de la piscina con un uialertcontroller
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Nombre" message:@"Por favor, introduzca el nombre de la nueva piscina" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        textField.placeholder = @"Nombre de piscina";
+    }];
     
-    [self.tableView reloadData];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Cancelar" style:UIAlertActionStyleCancel handler:nil]];
+    
+    [alertController addAction:[UIAlertAction actionWithTitle:@"Agregar" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        UITextField* textField = alertController.textFields[0];
+        NSString* nombrePiscina = textField.text;
+        Piscina* nuevaPiscina = [[Repository sharedInstance] agregarPiscina:nombrePiscina]; //me da un warning, porque no estoy utilizando el objeto nuevaPiscina dentro de este método, pero me ignoro dicho warning.
+        //reemplazamos el localmemorydatasource por repository para evitar que los view controllers trabajen directamente sobre los datasources, puesto que ese trabajo requiere una gestión muy amplia
+        
+        [self.tableView reloadData];
+    }]];
+    
+    [self presentViewController:alertController animated:YES completion:nil]; //esta es la línea que muestra realmente el alertcontroller. sin esto, el alertcontroller no se muestra en pantalla
 }
 
 @end
