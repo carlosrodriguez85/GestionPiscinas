@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    self.title = [NSDateFormatter localizedStringFromDate:self.medicion.fecha dateStyle:NSDateFormatterShortStyle timeStyle:NSDateFormatterShortStyle]; //con self.title cambiamos el titulo que aparece arriba en el NavigationController.
+    
     //self.pHTextField.delegate = self; esto sería con todos los textfields, pero esta hecho en el storyboard.
     
     self.pHTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.pH];
