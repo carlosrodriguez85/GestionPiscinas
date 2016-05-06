@@ -15,7 +15,7 @@
     self = [super init];
     if (self){
         self.fecha = fecha;
-        self.parametros = [[ParametrosMedicion alloc] init];
+        self.parametros = [[ParametrosMedicion alloc] init];//cuando creo una medición, aún no he metido los parámetros, por tanto será un objeto de parámetros "vacío"
     }
     
     return self;

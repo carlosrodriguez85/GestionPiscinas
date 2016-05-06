@@ -15,7 +15,7 @@
     self = [super init];
     if (self){
         self.nombre = nombre;
-        self.mediciones = [[NSMutableArray alloc] init];
+        self.mediciones = [[NSMutableArray alloc] init]; //mis mediciones son un conjunto vacío
     }
     return self;
 }
