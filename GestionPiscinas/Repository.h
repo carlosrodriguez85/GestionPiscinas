@@ -11,7 +11,7 @@
 
 @interface Repository : NSObject
 
-+(Repository*) sharedInstance; //sharedRepository, defaultRepository, singleton, etc.
++(Repository*) sharedInstance; //Diferentes nombres que podría tener: sharedRepository, defaultRepository, singleton, etc.
 
 -(Piscina*)agregarPiscina:(NSString*)nombre;
 -(void)actualizarPiscina:(Piscina*)piscina;

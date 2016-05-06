@@ -23,6 +23,18 @@ static Repository* repository = nil;
     // return resultado;
     
     if (repository == nil) {
+        /*
+         En dos líneas (versión 1):
+         Repository* repo = [Repository alloc];
+         repo = [repo init];
+         */
+        
+        /*
+         En dos líneas (versión 2):
+         Repository* auxiliar = [Repository alloc];
+         Repository* repo = [auxiliar init];
+         */
+        
         repository = [[Repository alloc] init];
     }
     
@@ -32,7 +44,14 @@ static Repository* repository = nil;
 -(Piscina*)agregarPiscina:(NSString*)nombre
 {
     Piscina* nuevaPiscina = [[LocalMemoryDataSource sharedInstance] agregarPiscina:nombre];
+    
+    //en una linea:
     [[PlistDataSource sharedInstance] agregarPiscina:nombre];
+    
+    /*
+     En dos líneas:
+     PlistDataSource* dataSource = [PlistDataSource sharedInstance];
+     [dataSource agregarPiscina:nombre];*/
     
     return nuevaPiscina;
 }
