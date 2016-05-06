@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Medicion.h"
+#import "Piscina.h"
 
 @interface ParametrosMedicionViewController : UIViewController
+
+@property (nonatomic, strong) Piscina* piscina;
+@property (nonatomic, strong) Medicion* medicion;
 
 @end

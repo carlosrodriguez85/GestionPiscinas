@@ -9,6 +9,7 @@
 #import "MedicionesViewController.h"
 #import "Medicion.h"
 #import "Repository.h"
+#import "ParametrosMedicionViewController.h"
 
 @interface MedicionesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -49,15 +50,21 @@
     return cell;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    ParametrosMedicionViewController* controller = (ParametrosMedicionViewController*)[segue destinationViewController];
+    
+    NSArray* mediciones = self.piscina.mediciones;
+    NSIndexPath* indexPathMedicionSeleccionada = self.tableView.indexPathForSelectedRow;
+    Medicion* medicionSeleccionada = [mediciones objectAtIndex:indexPathMedicionSeleccionada.row];
+    
+    controller.piscina = self.piscina;
+    controller.medicion = medicionSeleccionada;
 }
-*/
 
 - (IBAction)agregarMedicion:(id)sender {
     //creamos una medición con la fecha y hora actual

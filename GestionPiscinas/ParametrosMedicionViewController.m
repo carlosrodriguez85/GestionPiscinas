@@ -7,6 +7,7 @@
 //
 
 #import "ParametrosMedicionViewController.h"
+#import "ParametrosMedicion.h"
 
 @interface ParametrosMedicionViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *pHTextField;
