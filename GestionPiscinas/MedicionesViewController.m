@@ -52,6 +52,24 @@
     return cell;
 }
 
+//este método es el que hay que implementar si queremos que aparezca el boton de eliminar en las filas. Este método es opcional y proviene del delegate de los tableViews.
+-(BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return YES;
+}
+
+//este método lo llama el framework para que yo actualice el modelo de datos. En nuestro, haremos uso del Repository para llevar a cabo la actualización.
+-(void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [self.piscina.mediciones removeObjectAtIndex:indexPath.row];
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    
+    //[self.tableView reloadData]; //después de borrar hay que actualizar la tabla
+    
+    //usamos el siguiente método para optimizar el proceso de recarga y, de paso, meter una animación al borrado
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+}
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
