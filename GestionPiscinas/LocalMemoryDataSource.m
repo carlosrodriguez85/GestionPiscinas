@@ -37,6 +37,10 @@ static LocalMemoryDataSource* dataSource = nil;
     return dataSource;
 }
 
+-(void)sustituirPiscinas:(NSArray *)piscinas{
+    self.piscinas = [[NSMutableArray alloc] initWithArray:piscinas]; //reemplazamos todas las piscinas que hubiese en memoria por las piscinas que nos pasan como parámetro
+}
+
 -(Piscina *)agregarPiscina:(NSString *)nombre
 {
     Piscina* piscina = [[Piscina alloc] initWithNombre:nombre];
