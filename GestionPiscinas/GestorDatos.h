@@ -13,7 +13,7 @@
 
 @protocol GestorDatos <NSObject>
 
-+(Piscina*)agregarPiscina;
++(Piscina*)agregarPiscina:(NSString*)nombre;
 +(void)actualizarPiscina:(Piscina*)piscina;
 +(void)eliminarPiscina:(Piscina*)piscina;
 +(NSArray*)obtenerPiscinas;

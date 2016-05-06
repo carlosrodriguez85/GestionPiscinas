@@ -17,6 +17,7 @@
 		8EDDF4141C96EA55008D05FA /* Piscina.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4131C96EA55008D05FA /* Piscina.m */; };
 		8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4161C96EB13008D05FA /* Medicion.m */; };
 		8EDDF41A1C96EB8B008D05FA /* ParametrosMedicion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4191C96EB8B008D05FA /* ParametrosMedicion.m */; };
+		8EEE137E1C96F47700994840 /* GestorDatosVolatil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE137D1C96F47700994840 /* GestorDatosVolatil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,8 @@
 		8EDDF4161C96EB13008D05FA /* Medicion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Medicion.m; sourceTree = "<group>"; };
 		8EDDF4181C96EB8B008D05FA /* ParametrosMedicion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametrosMedicion.h; sourceTree = "<group>"; };
 		8EDDF4191C96EB8B008D05FA /* ParametrosMedicion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametrosMedicion.m; sourceTree = "<group>"; };
+		8EEE137C1C96F47700994840 /* GestorDatosVolatil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GestorDatosVolatil.h; sourceTree = "<group>"; };
+		8EEE137D1C96F47700994840 /* GestorDatosVolatil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GestorDatosVolatil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 			isa = PBXGroup;
 			children = (
 				8E5229451C96F2AB006C8B4D /* GestorDatos.h */,
+				8EEE137C1C96F47700994840 /* GestorDatosVolatil.h */,
+				8EEE137D1C96F47700994840 /* GestorDatosVolatil.m */,
 			);
 			name = GestoresDatos;
 			sourceTree = "<group>";
@@ -188,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC2830B1C96E8F4006A242D /* MedicionesViewController.m in Sources */,
+				8EEE137E1C96F47700994840 /* GestorDatosVolatil.m in Sources */,
 				8EDDF41A1C96EB8B008D05FA /* ParametrosMedicion.m in Sources */,
 				8EDDF4141C96EA55008D05FA /* Piscina.m in Sources */,
 				8E4CF69D1C96DE6E008C68C9 /* AppDelegate.m in Sources */,
