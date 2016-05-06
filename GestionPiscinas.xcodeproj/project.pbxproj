@@ -19,6 +19,7 @@
 		8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4161C96EB13008D05FA /* Medicion.m */; };
 		8EDDF41A1C96EB8B008D05FA /* ParametrosMedicion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4191C96EB8B008D05FA /* ParametrosMedicion.m */; };
 		8EEE137E1C96F47700994840 /* LocalMemoryDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EEE137D1C96F47700994840 /* LocalMemoryDataSource.m */; };
+		8EF3C0AD1CBD6B87007A23D8 /* ParametrosMedicionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF3C0AC1CBD6B87007A23D8 /* ParametrosMedicionViewController.m */; };
 		8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,8 @@
 		8EDDF4191C96EB8B008D05FA /* ParametrosMedicion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametrosMedicion.m; sourceTree = "<group>"; };
 		8EEE137C1C96F47700994840 /* LocalMemoryDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalMemoryDataSource.h; sourceTree = "<group>"; };
 		8EEE137D1C96F47700994840 /* LocalMemoryDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalMemoryDataSource.m; sourceTree = "<group>"; };
+		8EF3C0AB1CBD6B87007A23D8 /* ParametrosMedicionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParametrosMedicionViewController.h; sourceTree = "<group>"; };
+		8EF3C0AC1CBD6B87007A23D8 /* ParametrosMedicionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParametrosMedicionViewController.m; sourceTree = "<group>"; };
 		8EFD34CD1C9ADB3000DEC0E4 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,6 +90,8 @@
 				8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */,
 				8EC283091C96E8F4006A242D /* MedicionesViewController.h */,
 				8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */,
+				8EF3C0AB1CBD6B87007A23D8 /* ParametrosMedicionViewController.h */,
+				8EF3C0AC1CBD6B87007A23D8 /* ParametrosMedicionViewController.m */,
 				8E4CF6A11C96DE6E008C68C9 /* Main.storyboard */,
 				8E4CF6A41C96DE6E008C68C9 /* Assets.xcassets */,
 				8E4CF6A61C96DE6E008C68C9 /* LaunchScreen.storyboard */,
@@ -211,6 +216,7 @@
 				8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */,
 				8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */,
 				8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */,
+				8EF3C0AD1CBD6B87007A23D8 /* ParametrosMedicionViewController.m in Sources */,
 				8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
