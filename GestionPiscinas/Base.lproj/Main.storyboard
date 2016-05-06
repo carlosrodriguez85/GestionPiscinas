@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="1061" y="378"/>
         </scene>
-        <!--Fecha muestreo-->
+        <!--Parametros Medicion View Controller-->
         <scene sceneID="c8u-Bf-VeX">
             <objects>
-                <viewController id="mYT-cQ-jA5" customClass="ParametrosMedicionViewController" sceneMemberID="viewController">
+                <viewController id="mYT-cQ-jA5" userLabel="Parametros Medicion View Controller" customClass="ParametrosMedicionViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="BsL-Vu-1Ay"/>
                         <viewControllerLayoutGuide type="bottom" id="wGt-nB-pFp"/>
@@ -233,16 +233,25 @@
                                 <rect key="frame" x="245" y="172" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mYT-cQ-jA5" id="Vua-xm-qz9"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yWi-Gb-0HP">
                                 <rect key="frame" x="245" y="248" width="335" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mYT-cQ-jA5" id="oiJ-Ar-4Ls"/>
+                                </connections>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zLz-ta-Bst">
                                 <rect key="frame" x="245" y="210" width="149" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mYT-cQ-jA5" id="r4Z-Tc-MxP"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTC-CG-FEj">
                                 <rect key="frame" x="402" y="215" width="21" height="21"/>
@@ -257,6 +266,9 @@
                                 <rect key="frame" x="431" y="211" width="149" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                                <connections>
+                                    <outlet property="delegate" destination="mYT-cQ-jA5" id="5hq-sm-Qg5"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

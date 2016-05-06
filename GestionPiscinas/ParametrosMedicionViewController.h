@@ -10,7 +10,7 @@
 #import "Medicion.h"
 #import "Piscina.h"
 
-@interface ParametrosMedicionViewController : UIViewController
+@interface ParametrosMedicionViewController : UIViewController<UITextFieldDelegate>
 
 @property (nonatomic, strong) Piscina* piscina;
 @property (nonatomic, strong) Medicion* medicion;

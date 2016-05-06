@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     
+    //self.pHTextField.delegate = self; esto sería con todos los textfields, pero esta hecho en el storyboard.
+    
     self.pHTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.pH];
     self.minDesinfectanteResidualTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.desinfectanteResidual];
     self.maxDesinfectanteResidualTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.desinfectanteLibre];
@@ -73,6 +75,30 @@
     }
     
     [[Repository sharedInstance] actualizarPiscina:self.piscina];
+}
+
+#pragma mark - UITextField delegate
+
+//estamos convirtiendo lo introducido en los textfield a los tipos de los properties de la clase ParametrosMedicion
+-(BOOL)textFieldShouldReturn:(UITextField *)textField{
+    [textField resignFirstResponder]; //oculta el teclado
+    
+    if (textField == self.pHTextField){
+        self.medicion.parametros.pH = [textField.text floatValue];
+    }
+    else if (textField == self.minDesinfectanteResidualTextField){
+        self.medicion.parametros.desinfectanteResidual = [textField.text floatValue];
+    }
+    else if (textField == self.maxDesinfectanteResidualTextField){
+        self.medicion.parametros.desinfectanteLibre = [textField.text floatValue];
+    }
+    else if (textField == self.tiempoRecirculacionTextField){
+        self.medicion.parametros.tiempoRecirculacion = [textField.text floatValue];
+    }
+    
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    
+    return YES;
 }
 
 @end
