@@ -66,7 +66,10 @@
     Piscina* piscinaAEliminar = [piscinas objectAtIndex:indexPath.row];
     [[Repository sharedInstance] eliminarPiscina:piscinaAEliminar];
     
-    [self.tableView reloadData]; //después de borrar hay que actualizar la tabla
+    //[self.tableView reloadData]; //después de borrar hay que actualizar la tabla
+    
+    //usamos el siguiente método para optimizar el proceso de recarga y, de paso, meter una animación al borrado
+    [self.tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
 }
 
 #pragma mark - Navigation
