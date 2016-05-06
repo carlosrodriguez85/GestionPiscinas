@@ -14,7 +14,7 @@
 
 @end
 
-@implementation LocalMemoryDataSource //aún falta por implementar el sharedInstance
+@implementation LocalMemoryDataSource
 
 static LocalMemoryDataSource* dataSource = nil;
 

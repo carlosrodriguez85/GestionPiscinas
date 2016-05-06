@@ -12,6 +12,7 @@
 		8E4CF6A31C96DE6E008C68C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A11C96DE6E008C68C9 /* Main.storyboard */; };
 		8E4CF6A51C96DE6E008C68C9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A41C96DE6E008C68C9 /* Assets.xcassets */; };
 		8E4CF6A81C96DE6E008C68C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A61C96DE6E008C68C9 /* LaunchScreen.storyboard */; };
+		8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CFA001CA946D50073CD65 /* PlistDataSource.m */; };
 		8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */; };
 		8EC2830B1C96E8F4006A242D /* MedicionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */; };
 		8EDDF4141C96EA55008D05FA /* Piscina.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4131C96EA55008D05FA /* Piscina.m */; };
@@ -31,6 +32,8 @@
 		8E4CF6A71C96DE6E008C68C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E4CF6A91C96DE6E008C68C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5229451C96F2AB006C8B4D /* DataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataSource.h; sourceTree = "<group>"; };
+		8E6CF9FF1CA946D50073CD65 /* PlistDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlistDataSource.h; sourceTree = "<group>"; };
+		8E6CFA001CA946D50073CD65 /* PlistDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistDataSource.m; sourceTree = "<group>"; };
 		8E8E67B11C96E62C000B04A8 /* PiscinasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiscinasViewController.h; sourceTree = "<group>"; };
 		8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiscinasViewController.m; sourceTree = "<group>"; };
 		8EC283091C96E8F4006A242D /* MedicionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicionesViewController.h; sourceTree = "<group>"; };
@@ -107,6 +110,8 @@
 				8E5229451C96F2AB006C8B4D /* DataSource.h */,
 				8EEE137C1C96F47700994840 /* LocalMemoryDataSource.h */,
 				8EEE137D1C96F47700994840 /* LocalMemoryDataSource.m */,
+				8E6CF9FF1CA946D50073CD65 /* PlistDataSource.h */,
+				8E6CFA001CA946D50073CD65 /* PlistDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -204,6 +209,7 @@
 				8E4CF69D1C96DE6E008C68C9 /* AppDelegate.m in Sources */,
 				8E4CF69A1C96DE6E008C68C9 /* main.m in Sources */,
 				8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */,
+				8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */,
 				8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */,
 				8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */,
 			);
