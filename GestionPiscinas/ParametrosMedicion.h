@@ -10,10 +10,10 @@
 
 @interface ParametrosMedicion : NSObject
 
-@property (nonatomic, assign) float PH;
-@property (nonatomic, assign) float cloroResidual;
-@property (nonatomic, assign) float cloroLibre;
+@property (nonatomic, assign) float pH;
+@property (nonatomic, assign) float desinfectanteResidual;
+@property (nonatomic, assign) float desinfectanteLibre;
 @property (nonatomic, assign) BOOL turbidez;
-@property (nonatomic, assign) BOOL otro;
+@property (nonatomic, assign) BOOL transparencia;
 
 @end
