@@ -7,7 +7,7 @@
 //
 
 #import "PiscinasViewController.h"
-#import "LocalMemoryDataSource.h"
+#import "Repository.h" //hemos cambiado el import de LocalMemoryDataSource.h a Repository.h, puesto que vamos a ocultar a los view controllers los datasources, puesto que queremos que los data sources sea el repository quien los gestione
 
 @interface PiscinasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -36,7 +36,7 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSArray* piscinas = [LocalMemoryDataSource obtenerPiscinas];
+    NSArray* piscinas = [[Repository sharedInstance] obtenerPiscinas]; //reemplazamos el localmemorydatasource por repository para evitar que los view controllers trabajen directamente sobre los datasources, puesto que ese trabajo requiere una gestión muy amplia
     return piscinas.count;
 }
 
@@ -44,7 +44,7 @@
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaPiscina" forIndexPath:indexPath];
     
-    NSArray* piscinas = [LocalMemoryDataSource obtenerPiscinas];
+    NSArray* piscinas = [[Repository sharedInstance] obtenerPiscinas]; //reemplazamos el localmemorydatasource por repository para evitar que los view controllers trabajen directamente sobre los datasources, puesto que ese trabajo requiere una gestión muy amplia
     Piscina* piscina = [piscinas objectAtIndex:indexPath.row];
     
     cell.textLabel.text = piscina.nombre;
@@ -64,7 +64,8 @@
 
 - (IBAction)pulsarAgregarPiscina:(id)sender {
     NSString* nombrePiscina = @"Pepito"; //esto lo cambiaremos para que lo coja de un UIAlertController
-    Piscina* nuevaPiscina = [LocalMemoryDataSource agregarPiscina:nombrePiscina]; //me da un warning, porque no estoy utilizando el objeto nuevaPiscina dentro de este método, pero me ignoro dicho warning
+    Piscina* nuevaPiscina = [[Repository sharedInstance] agregarPiscina:nombrePiscina]; //me da un warning, porque no estoy utilizando el objeto nuevaPiscina dentro de este método, pero me ignoro dicho warning.
+        //reemplazamos el localmemorydatasource por repository para evitar que los view controllers trabajen directamente sobre los datasources, puesto que ese trabajo requiere una gestión muy amplia
     
     [self.tableView reloadData];
 }
