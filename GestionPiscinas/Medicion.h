@@ -15,7 +15,7 @@
  medicion1.parametros.PH = 5.5;
  */
 
-@interface Medicion : NSObject
+@interface Medicion : NSObject<NSCoding> //tenemos que implementar el protocolo NSCoding, puesto que vamos a guardar mediciones en un plist
 
 @property (nonatomic, strong) NSDate* fecha;
 @property (nonatomic, strong) ParametrosMedicion* parametros;

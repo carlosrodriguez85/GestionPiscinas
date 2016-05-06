@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 @import UIKit; //esto es para poder utilizar UIImage
 
-@interface Piscina : NSObject
+@interface Piscina : NSObject<NSCoding> //tenemos que implementar el protocolo NSCoding, puesto que vamos a guardar piscinas en un plist
 
 @property (nonatomic, strong) NSString* nombre;
 @property (nonatomic, strong) UIImage* imagen;

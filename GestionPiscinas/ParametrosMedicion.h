@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ParametrosMedicion : NSObject
+@interface ParametrosMedicion : NSObject<NSCoding> //tenemos que implementar el protocolo NSCoding, puesto que vamos a guardar parametros de medición en un plist
 
 @property (nonatomic, assign) float pH;
 @property (nonatomic, assign) float desinfectanteResidual;
