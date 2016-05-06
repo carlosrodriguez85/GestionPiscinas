@@ -8,6 +8,7 @@
 
 #import "PiscinasViewController.h"
 #import "Repository.h" //hemos cambiado el import de LocalMemoryDataSource.h a Repository.h, puesto que vamos a ocultar a los view controllers los datasources, puesto que queremos que los data sources sea el repository quien los gestione
+#import "MedicionesViewController.h"
 
 @interface PiscinasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -52,15 +53,27 @@
     return cell;
 }
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    //obtengo una referencia al controller que se va a mostrar a continuación
+    MedicionesViewController* controller = (MedicionesViewController*)[segue destinationViewController];
+    
+    //obtengo todas las piscinas
+    NSArray* piscinasRecuperadas = [[Repository sharedInstance] obtenerPiscinas];
+    
+    //obtengo el indexpath de la fila que he tocado en el tableview
+    NSIndexPath* indexPathFilaSeleccionada = [self.tableView indexPathForSelectedRow];
+    
+    //de las piscinas obtenidas, recupero la piscina que está en el mismo indexpath que la fila seleccionada
+    Piscina* piscinaSeleccionada = [piscinasRecuperadas objectAtIndex:indexPathFilaSeleccionada.row];
 }
-*/
+
+#pragma mark - IBActions
 
 - (IBAction)pulsarAgregarPiscina:(id)sender {
     //pedimos el nombre de la piscina con un uialertcontroller
