@@ -16,33 +16,39 @@
 
 @implementation LocalMemoryDataSource //aún falta por implementar el sharedInstance
 
+-(instancetype)init
+{
+    self = [super init];
+    if (self){
+        self.piscinas = [[NSMutableArray alloc] init];
+    }
+    
+    return self;
+}
+
 -(Piscina *)agregarPiscina:(NSString *)nombre
 {
     Piscina* piscina = [[Piscina alloc] initWithNombre:nombre];
     
-    if (piscinas == nil){
-        piscinas = [[NSMutableArray alloc] init];
-    }
-    
-    [piscinas addObject:piscina];
+    [self.piscinas addObject:piscina];
     
     return piscina;
 }
 
 -(void)actualizarPiscina:(Piscina*)piscina
 {
-    NSInteger indexPiscina = [piscinas indexOfObject:piscina]; //esto me da el index de la piscina en el array
-    [piscinas replaceObjectAtIndex:indexPiscina withObject:piscina];
+    NSInteger indexPiscina = [self.piscinas indexOfObject:piscina]; //esto me da el index de la piscina en el array
+    [self.piscinas replaceObjectAtIndex:indexPiscina withObject:piscina];
 }
 
 -(void)eliminarPiscina:(Piscina*)piscina
 {
-    [piscinas removeObject:piscina];
+    [self.piscinas removeObject:piscina];
 }
 
 -(NSArray*)obtenerPiscinas
 {
-    return piscinas;
+    return self.piscinas;
 }
 
 @end
