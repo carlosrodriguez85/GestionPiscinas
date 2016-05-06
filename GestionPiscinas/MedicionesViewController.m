@@ -8,6 +8,7 @@
 
 #import "MedicionesViewController.h"
 #import "Medicion.h"
+#import "Repository.h"
 
 @interface MedicionesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -59,6 +60,15 @@
 */
 
 - (IBAction)agregarMedicion:(id)sender {
+    //creamos una medición con la fecha y hora actual
+    NSDate* fecha = [NSDate date]; //por ahora ponemos esto, pero en realidad tendríamos que mostrar un UIAlertController para que el usuario introdujese la fecha.
+    Medicion* medicion = [[Medicion alloc] initWithFecha:fecha];
+    [self.piscina.mediciones addObject:medicion];
+    
+    //ejecutamos el método actualizarPiscina para guardar los nuevos contenidos de la piscina donde corresponda (plist, memoria, etc.)
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    
+    [self.tableView reloadData];
 }
 
 @end
