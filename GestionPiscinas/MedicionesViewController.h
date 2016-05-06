@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Piscina.h"
 
 @interface MedicionesViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, strong) Piscina* piscina;
 
 @end
