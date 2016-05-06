@@ -8,10 +8,13 @@
 
 #import "LocalMemoryDataSource.h"
 
+@interface LocalMemoryDataSource()
+
+@property (nonatomic, strong) NSMutableArray* piscinas;
+
+@end
+
 @implementation LocalMemoryDataSource //aún falta por implementar el sharedInstance
-
-
-static NSMutableArray* piscinas = nil;
 
 -(Piscina *)agregarPiscina:(NSString *)nombre
 {
