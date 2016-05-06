@@ -34,6 +34,10 @@ static LocalMemoryDataSource* dataSource = nil;
         dataSource = [[LocalMemoryDataSource alloc] init];
     }
     
+    dataSource.cuantasReferencias++;
+    
+    NSLog(@"Se ha referenciado al singleton de la clase LocalMemoryDataSource %d veces", dataSource.cuantasReferencias);
+    
     return dataSource;
 }
 

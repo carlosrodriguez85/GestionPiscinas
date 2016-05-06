@@ -38,6 +38,10 @@ static PlistDataSource* dataSource = nil;
         dataSource = [[PlistDataSource alloc] init];
     }
     
+    dataSource.cuantasReferencias++;
+    
+    NSLog(@"Se ha referenciado al singleton de la clase PlistDataSource %d veces", dataSource.cuantasReferencias);
+    
     return dataSource;
 }
 

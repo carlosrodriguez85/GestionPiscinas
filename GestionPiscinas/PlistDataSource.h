@@ -11,4 +11,6 @@
 
 @interface PlistDataSource : NSObject<DataSource>
 
+@property (nonatomic, assign) int cuantasReferencias;
+
 @end
