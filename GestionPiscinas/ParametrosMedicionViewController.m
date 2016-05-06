@@ -22,6 +22,18 @@
 
 @implementation ParametrosMedicionViewController
 
+-(void)viewDidLoad
+{
+    [super viewDidLoad];
+    
+    self.pHTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.pH];
+    self.minDesinfectanteResidualTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.desinfectanteResidual];
+    self.maxDesinfectanteResidualTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.desinfectanteLibre];
+    self.tiempoRecirculacionTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.tiempoRecirculacion];
+    self.turbidezSwitch.on = self.medicion.parametros.turbidez;
+    self.transparenciaSwitch.on = self.medicion.parametros.transparencia;
+}
+
 - (IBAction)turbidezWasTapped:(id)sender {
     if (self.turbidezSwitch.on == YES){
         self.turbidezLabel.text = @"Sí";

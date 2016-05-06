@@ -16,6 +16,7 @@
         self.pH = [aDecoder decodeFloatForKey:@"pH"];
         self.desinfectanteResidual = [aDecoder decodeFloatForKey:@"desinfectanteResidual"];
         self.desinfectanteLibre = [aDecoder decodeFloatForKey:@"desinfectanteLibre"];
+        self.tiempoRecirculacion = [aDecoder decodeFloatForKey:@"tiempoRecirculacion"];
         self.turbidez = [aDecoder decodeBoolForKey:@"turbidez"];
         self.transparencia = [aDecoder decodeBoolForKey:@"transparencia"];
     }
@@ -27,6 +28,7 @@
     [aCoder encodeFloat:self.pH forKey:@"pH"];
     [aCoder encodeFloat:self.desinfectanteResidual forKey:@"desinfectanteResidual"];
     [aCoder encodeFloat:self.desinfectanteLibre forKey:@"desinfectanteLibre"];
+    [aCoder encodeFloat:self.tiempoRecirculacion forKey:@"tiempoRecirculacion"];
     [aCoder encodeBool:self.turbidez forKey:@"turbidez"];
     [aCoder encodeBool:self.transparencia forKey:@"transparencia"];
 }

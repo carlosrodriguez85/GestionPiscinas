@@ -13,6 +13,7 @@
 @property (nonatomic, assign) float pH;
 @property (nonatomic, assign) float desinfectanteResidual;
 @property (nonatomic, assign) float desinfectanteLibre;
+@property (nonatomic, assign) float tiempoRecirculacion;
 @property (nonatomic, assign) BOOL turbidez;
 @property (nonatomic, assign) BOOL transparencia;
 
