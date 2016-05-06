@@ -13,10 +13,12 @@
 
 @protocol DataSource <NSObject>
 
-+(Piscina*)agregarPiscina:(NSString*)nombre;
-+(void)actualizarPiscina:(Piscina*)piscina;
-+(void)eliminarPiscina:(Piscina*)piscina;
-+(NSArray*)obtenerPiscinas;
++(instancetype)sharedInstance; //esto devolvera un objeto de la clase que implemente el DataSource, y como no sabemos el nombre de dicha clase (o habrá varias clases posibles, eg. DBDataSource, iCloudDataSource, PlistDataSource), entonces ponemos instancetype.
+
+-(Piscina*)agregarPiscina:(NSString*)nombre;
+-(void)actualizarPiscina:(Piscina*)piscina;
+-(void)eliminarPiscina:(Piscina*)piscina;
+-(NSArray*)obtenerPiscinas;
 
 @end
 

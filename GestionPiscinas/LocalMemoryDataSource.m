@@ -8,11 +8,12 @@
 
 #import "LocalMemoryDataSource.h"
 
-@implementation LocalMemoryDataSource
+@implementation LocalMemoryDataSource //aún falta por implementar el sharedInstance
+
 
 static NSMutableArray* piscinas = nil;
 
-+(Piscina *)agregarPiscina:(NSString *)nombre
+-(Piscina *)agregarPiscina:(NSString *)nombre
 {
     Piscina* piscina = [[Piscina alloc] initWithNombre:nombre];
     
@@ -25,18 +26,18 @@ static NSMutableArray* piscinas = nil;
     return piscina;
 }
 
-+(void)actualizarPiscina:(Piscina*)piscina
+-(void)actualizarPiscina:(Piscina*)piscina
 {
     NSInteger indexPiscina = [piscinas indexOfObject:piscina]; //esto me da el index de la piscina en el array
     [piscinas replaceObjectAtIndex:indexPiscina withObject:piscina];
 }
 
-+(void)eliminarPiscina:(Piscina*)piscina
+-(void)eliminarPiscina:(Piscina*)piscina
 {
     [piscinas removeObject:piscina];
 }
 
-+(NSArray*)obtenerPiscinas
+-(NSArray*)obtenerPiscinas
 {
     return piscinas;
 }
