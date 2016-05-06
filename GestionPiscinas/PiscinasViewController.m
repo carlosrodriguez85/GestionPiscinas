@@ -71,6 +71,9 @@
     
     //de las piscinas obtenidas, recupero la piscina que está en el mismo indexpath que la fila seleccionada
     Piscina* piscinaSeleccionada = [piscinasRecuperadas objectAtIndex:indexPathFilaSeleccionada.row];
+    
+    //meto la piscina seleccionada en el controller
+    controller.piscina = piscinaSeleccionada;
 }
 
 #pragma mark - IBActions

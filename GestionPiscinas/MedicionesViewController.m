@@ -7,6 +7,7 @@
 //
 
 #import "MedicionesViewController.h"
+#import "Medicion.h"
 
 @interface MedicionesViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
@@ -34,12 +35,15 @@
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return self.piscina.mediciones.count; //hay tantas filas como mediciones en la piscina
 }
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"CeldaMedicion" forIndexPath:indexPath];
+    Medicion* medicion = [self.piscina.mediciones objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [medicion.fecha description]; //por ahora utilizamos el método description, pero luego será un NSDateFormatter. Esto es simplemente para no complicar el código más.
     
     return cell;
 }
