@@ -8,6 +8,7 @@
 
 #import "ParametrosMedicionViewController.h"
 #import "ParametrosMedicion.h"
+#import "Repository.h"
 
 @interface ParametrosMedicionViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *pHTextField;
@@ -32,24 +33,46 @@
     self.tiempoRecirculacionTextField.text = [NSString stringWithFormat:@"%.1f", self.medicion.parametros.tiempoRecirculacion];
     self.turbidezSwitch.on = self.medicion.parametros.turbidez;
     self.transparenciaSwitch.on = self.medicion.parametros.transparencia;
-}
-
-- (IBAction)turbidezWasTapped:(id)sender {
+    
     if (self.turbidezSwitch.on == YES){
         self.turbidezLabel.text = @"Sí";
     }
     else{
         self.turbidezLabel.text = @"No";
     }
-}
-
-- (IBAction)transparenciaWasTapped:(id)sender {
+    
     if (self.transparenciaSwitch.on == YES){
         self.transparenciaLabel.text = @"Sí";
     }
     else{
         self.transparenciaLabel.text = @"No";
     }
+}
+
+- (IBAction)turbidezWasTapped:(id)sender {
+    if (self.turbidezSwitch.on == YES){
+        self.turbidezLabel.text = @"Sí";
+        self.medicion.parametros.turbidez = YES;
+    }
+    else{
+        self.turbidezLabel.text = @"No";
+        self.medicion.parametros.turbidez = NO;
+    }
+    
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+}
+
+- (IBAction)transparenciaWasTapped:(id)sender {
+    if (self.transparenciaSwitch.on == YES){
+        self.transparenciaLabel.text = @"Sí";
+        self.medicion.parametros.transparencia = YES;
+    }
+    else{
+        self.transparenciaLabel.text = @"No";
+        self.medicion.parametros.transparencia = NO;
+    }
+    
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
 }
 
 @end
