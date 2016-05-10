@@ -108,6 +108,8 @@
 -(BOOL)textFieldShouldReturn:(UITextField *)textField{
     [textField resignFirstResponder]; //oculta el teclado
     
+    //estas líneas no son necesarias, puesto que en el viewWillDisappear ya guardamos los contenidos de todos los textfields en el modelo siempre que se le dé al botón atrás.
+    /*
     if (textField == self.pHTextField){
         self.medicion.parametros.pH = [textField.text floatValue];
     }
@@ -119,7 +121,7 @@
     }
     else if (textField == self.tiempoRecirculacionTextField){
         self.medicion.parametros.tiempoRecirculacion = [textField.text floatValue];
-    }
+    }*/
     
     //no hace falta actualizar el repositorio aquí, puesto que se va a actualizar al darle al botón de atrás. Hemos implementado el método viewWillDisappear con esta línea.
     //[[Repository sharedInstance] actualizarPiscina:self.piscina];
