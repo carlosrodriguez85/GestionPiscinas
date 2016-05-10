@@ -14,6 +14,7 @@
 		8E4CF6A81C96DE6E008C68C9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E4CF6A61C96DE6E008C68C9 /* LaunchScreen.storyboard */; };
 		8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E6CFA001CA946D50073CD65 /* PlistDataSource.m */; };
 		8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */; };
+		8EB69ADD1CE1FB8700FC5EF7 /* iCloudDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EB69ADC1CE1FB8700FC5EF7 /* iCloudDataSource.m */; };
 		8EC2830B1C96E8F4006A242D /* MedicionesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */; };
 		8EDDF4141C96EA55008D05FA /* Piscina.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4131C96EA55008D05FA /* Piscina.m */; };
 		8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EDDF4161C96EB13008D05FA /* Medicion.m */; };
@@ -37,6 +38,9 @@
 		8E6CFA001CA946D50073CD65 /* PlistDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlistDataSource.m; sourceTree = "<group>"; };
 		8E8E67B11C96E62C000B04A8 /* PiscinasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PiscinasViewController.h; sourceTree = "<group>"; };
 		8E8E67B21C96E62C000B04A8 /* PiscinasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PiscinasViewController.m; sourceTree = "<group>"; };
+		8EB69ADA1CE1FAFF00FC5EF7 /* GestionPiscinas.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = GestionPiscinas.entitlements; sourceTree = "<group>"; };
+		8EB69ADB1CE1FB8700FC5EF7 /* iCloudDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = iCloudDataSource.h; sourceTree = "<group>"; };
+		8EB69ADC1CE1FB8700FC5EF7 /* iCloudDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = iCloudDataSource.m; sourceTree = "<group>"; };
 		8EC283091C96E8F4006A242D /* MedicionesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MedicionesViewController.h; sourceTree = "<group>"; };
 		8EC2830A1C96E8F4006A242D /* MedicionesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MedicionesViewController.m; sourceTree = "<group>"; };
 		8EDDF4121C96EA55008D05FA /* Piscina.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Piscina.h; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 		8E4CF6971C96DE6E008C68C9 /* GestionPiscinas */ = {
 			isa = PBXGroup;
 			children = (
+				8EB69ADA1CE1FAFF00FC5EF7 /* GestionPiscinas.entitlements */,
 				8EDDF4111C96EA24008D05FA /* Modelo */,
 				8E4CF69B1C96DE6E008C68C9 /* AppDelegate.h */,
 				8E4CF69C1C96DE6E008C68C9 /* AppDelegate.m */,
@@ -117,6 +122,8 @@
 				8EEE137D1C96F47700994840 /* LocalMemoryDataSource.m */,
 				8E6CF9FF1CA946D50073CD65 /* PlistDataSource.h */,
 				8E6CFA001CA946D50073CD65 /* PlistDataSource.m */,
+				8EB69ADB1CE1FB8700FC5EF7 /* iCloudDataSource.h */,
+				8EB69ADC1CE1FB8700FC5EF7 /* iCloudDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -168,6 +175,12 @@
 				TargetAttributes = {
 					8E4CF6941C96DE6E008C68C9 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = LVEGP727J6;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -215,6 +228,7 @@
 				8E4CF69A1C96DE6E008C68C9 /* main.m in Sources */,
 				8E8E67B31C96E62C000B04A8 /* PiscinasViewController.m in Sources */,
 				8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */,
+				8EB69ADD1CE1FB8700FC5EF7 /* iCloudDataSource.m in Sources */,
 				8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */,
 				8EF3C0AD1CBD6B87007A23D8 /* ParametrosMedicionViewController.m in Sources */,
 				8EDDF4171C96EB13008D05FA /* Medicion.m in Sources */,
@@ -329,6 +343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GestionPiscinas/GestionPiscinas.entitlements;
 				INFOPLIST_FILE = GestionPiscinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.GestionPiscinas;
@@ -340,6 +355,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = GestionPiscinas/GestionPiscinas.entitlements;
 				INFOPLIST_FILE = GestionPiscinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.GestionPiscinas;
