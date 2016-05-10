@@ -61,6 +61,12 @@
 {
     [super viewWillDisappear:animated];
     
+    //metemos en el modelo los contenidos de los textfields. El objetivo es evitar que el usuario no le dé a intro y no se guarden los datos.
+    self.medicion.parametros.pH = [self.pHTextField.text floatValue];
+    self.medicion.parametros.desinfectanteResidual = [self.minDesinfectanteResidualTextField.text floatValue];
+    self.medicion.parametros.desinfectanteLibre = [self.maxDesinfectanteResidualTextField.text floatValue];
+    self.medicion.parametros.tiempoRecirculacion = [self.tiempoRecirculacionTextField.text floatValue];
+    
     //metemos en el modelo el comentario que se haya escrito para que no se pierda
     self.medicion.parametros.comentario = self.comentarioTextView.text;
     
