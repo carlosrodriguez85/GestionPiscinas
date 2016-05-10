@@ -277,8 +277,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WQ5-IJ-RMG">
-                                <rect key="frame" x="20" y="316" width="560" height="264"/>
+                                <rect key="frame" x="20" y="316" width="560" height="70"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="cGX-9c-Oce"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -298,7 +301,6 @@
                             <constraint firstItem="DtU-sq-wkT" firstAttribute="top" secondItem="zLz-ta-Bst" secondAttribute="bottom" constant="51" id="BBX-e7-bMr"/>
                             <constraint firstItem="avl-wD-2LU" firstAttribute="baseline" secondItem="fvP-gD-fDQ" secondAttribute="baseline" id="Gej-dK-0G0"/>
                             <constraint firstItem="6Vz-M7-aFX" firstAttribute="top" secondItem="BsL-Vu-1Ay" secondAttribute="bottom" constant="20" id="Gzc-7S-9VI"/>
-                            <constraint firstAttribute="bottom" secondItem="WQ5-IJ-RMG" secondAttribute="bottom" constant="20" symbolic="YES" id="JtB-9S-bUa"/>
                             <constraint firstItem="10V-gU-qdW" firstAttribute="leading" secondItem="OGb-jr-Bob" secondAttribute="leadingMargin" id="K6D-1E-iZw"/>
                             <constraint firstItem="HQW-jL-zid" firstAttribute="baseline" secondItem="zLz-ta-Bst" secondAttribute="baseline" constant="1" id="LFg-Ul-vLT"/>
                             <constraint firstItem="6Vz-M7-aFX" firstAttribute="centerY" secondItem="0C3-z3-b55" secondAttribute="centerY" id="Llh-1g-ZYS"/>
