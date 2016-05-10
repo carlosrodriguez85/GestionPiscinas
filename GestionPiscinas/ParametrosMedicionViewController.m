@@ -78,7 +78,8 @@
         self.medicion.parametros.turbidez = NO;
     }
     
-    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    //no hace falta actualizar el repositorio aquí, puesto que se va a actualizar al darle al botón de atrás. Hemos implementado el método viewWillDisappear con esta línea.
+    //[[Repository sharedInstance] actualizarPiscina:self.piscina];
 }
 
 - (IBAction)transparenciaWasTapped:(id)sender {
@@ -91,7 +92,8 @@
         self.medicion.parametros.transparencia = NO;
     }
     
-    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    //no hace falta actualizar el repositorio aquí, puesto que se va a actualizar al darle al botón de atrás. Hemos implementado el método viewWillDisappear con esta línea.
+    //[[Repository sharedInstance] actualizarPiscina:self.piscina];
 }
 
 #pragma mark - UITextField delegate
@@ -113,7 +115,8 @@
         self.medicion.parametros.tiempoRecirculacion = [textField.text floatValue];
     }
     
-    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+    //no hace falta actualizar el repositorio aquí, puesto que se va a actualizar al darle al botón de atrás. Hemos implementado el método viewWillDisappear con esta línea.
+    //[[Repository sharedInstance] actualizarPiscina:self.piscina];
     
     return YES;
 }
