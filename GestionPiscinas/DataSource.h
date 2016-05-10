@@ -19,6 +19,7 @@
 -(void)actualizarPiscina:(Piscina*)piscina;
 -(void)eliminarPiscina:(Piscina*)piscina;
 -(NSArray*)obtenerPiscinas;
+-(void)sustituirPiscinas:(NSArray*)piscinas;
 
 @end
 

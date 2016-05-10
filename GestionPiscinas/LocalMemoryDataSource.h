@@ -13,6 +13,4 @@
 
 @property (nonatomic, assign) int cuantasReferencias;
 
--(void)sustituirPiscinas:(NSArray*)piscinas; //reemplazamos todas las piscinas que haya en memoria por las que nos pasen en el array (el parámetro piscinas)
-
 @end
