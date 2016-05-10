@@ -9,6 +9,7 @@
 #import "Repository.h"
 #import "LocalMemoryDataSource.h"
 #import "PlistDataSource.h" //añadimos el datasource, para que entienda el repositorio que hay PlistDataSources
+#import "iCloudDataSource.h"
 
 @implementation Repository
 
@@ -53,6 +54,8 @@ static Repository* repository = nil;
      PlistDataSource* dataSource = [PlistDataSource sharedInstance];
      [dataSource agregarPiscina:nombre];*/
     
+    [[iCloudDataSource sharedInstance] agregarPiscina:nombre];
+    
     return nuevaPiscina;
 }
 
@@ -60,12 +63,14 @@ static Repository* repository = nil;
 {
     [[LocalMemoryDataSource sharedInstance] actualizarPiscina:piscina];
     [[PlistDataSource sharedInstance] actualizarPiscina:piscina];
+    [[iCloudDataSource sharedInstance] actualizarPiscina:piscina];
 }
 
 -(void)eliminarPiscina:(Piscina*)piscina
 {
     [[LocalMemoryDataSource sharedInstance] eliminarPiscina:piscina];
     [[PlistDataSource sharedInstance] eliminarPiscina:piscina];
+    [[iCloudDataSource sharedInstance] eliminarPiscina:piscina];
 }
 
 -(NSArray*)obtenerPiscinas
@@ -73,6 +78,16 @@ static Repository* repository = nil;
     NSArray* piscinas = [[LocalMemoryDataSource sharedInstance] obtenerPiscinas];// lee de memoria primero, y si no hay nada en memoria, entonces lo lee del fichero.
     if (piscinas.count == 0){ //no hay nada en memoria
         piscinas = [[PlistDataSource sharedInstance] obtenerPiscinas]; //tomar del plist
+        NSArray* piscinasEnlaNube = [[iCloudDataSource sharedInstance] obtenerPiscinas]; //cogemos las piscinas de la nube
+        
+        if (piscinas.count == 0){ //es decir, si en el plist no hay piscinas
+            //si se da esta circunstancia, entonces hay que guardar en el plist local todas las piscinas que hubiese en la nube.
+            [[PlistDataSource sharedInstance] sustituirPiscinas:piscinasEnlaNube];
+        }
+        else if (piscinas.count > 0 && piscinasEnlaNube.count == 0){ //hemos guardado en local, pero no hay nada en la nube
+             //metemos en la nube todo lo que haya en el plist
+        }
+        
         [[LocalMemoryDataSource sharedInstance] sustituirPiscinas:piscinas]; //esto sincroniza lo que hay en disco con lo que hay en memoria (que siempre que se inicia la aplicación está siempre vacío)
     }
     

@@ -86,6 +86,12 @@ static iCloudDataSource* dataSource = nil;
     }
 }
 
+-(void)sustituirPiscinas:(NSArray *)piscinas
+{
+    [[NSUbiquitousKeyValueStore defaultStore] setArray:piscinas forKey:@"piscinas"];
+    [[NSUbiquitousKeyValueStore defaultStore] synchronize];
+}
+
 -(NSArray*)obtenerPiscinas
 {
     NSArray* piscinas = [[NSUbiquitousKeyValueStore defaultStore] arrayForKey:@"piscinas"];

@@ -82,6 +82,11 @@ static PlistDataSource* dataSource = nil;
     }
 }
 
+-(void)sustituirPiscinas:(NSArray *)piscinas
+{
+    [NSKeyedArchiver archiveRootObject:piscinas toFile:self.pathPlist];
+}
+
 -(void)eliminarPiscina:(Piscina*)piscina
 {
     //para eliminar una piscina, vamos a obtener el listado completo de piscinas, buscar el índice en el que esta la piscina, eliminar la piscina del array y volver a guardar el listado completo de nuevo dentro del fichero
