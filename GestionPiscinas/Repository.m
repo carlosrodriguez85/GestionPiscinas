@@ -83,9 +83,15 @@ static Repository* repository = nil;
         if (piscinas.count == 0){ //es decir, si en el plist no hay piscinas
             //si se da esta circunstancia, entonces hay que guardar en el plist local todas las piscinas que hubiese en la nube.
             [[PlistDataSource sharedInstance] sustituirPiscinas:piscinasEnlaNube];
+            piscinas = piscinasEnlaNube;
         }
         else if (piscinas.count > 0 && piscinasEnlaNube.count == 0){ //hemos guardado en local, pero no hay nada en la nube
-             //metemos en la nube todo lo que haya en el plist
+            //metemos en la nube todo lo que haya en el plist
+            [[iCloudDataSource sharedInstance] sustituirPiscinas:piscinas];
+        }
+        else if (piscinas.count != piscinasEnlaNube.count) { //si hay diferencia entre las piscinas que hay en local y las que hay en la nube, prevalece lo de la nube siempre
+            [[PlistDataSource sharedInstance] sustituirPiscinas:piscinasEnlaNube];
+            piscinas = piscinasEnlaNube;
         }
         
         [[LocalMemoryDataSource sharedInstance] sustituirPiscinas:piscinas]; //esto sincroniza lo que hay en disco con lo que hay en memoria (que siempre que se inicia la aplicación está siempre vacío)
