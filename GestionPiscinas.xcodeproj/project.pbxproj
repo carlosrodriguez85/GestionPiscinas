@@ -344,9 +344,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GestionPiscinas/GestionPiscinas.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GestionPiscinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.GestionPiscinas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.Piscinas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -356,9 +357,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = GestionPiscinas/GestionPiscinas.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GestionPiscinas/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.GestionPiscinas;
+				PRODUCT_BUNDLE_IDENTIFIER = es.everywaretech.Piscinas;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
