@@ -56,6 +56,18 @@
     self.comentarioTextView.text = self.medicion.parametros.comentario;
 }
 
+//este método se puede sobrecargar para ejecutar las operaciones que deseemos cuando el usuario pulse en el botón de atrás.
+-(void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    
+    //metemos en el modelo el comentario que se haya escrito para que no se pierda
+    self.medicion.parametros.comentario = self.comentarioTextView.text;
+    
+    //actualizamos la piscina, con el proposito de que se guarde el comentario
+    [[Repository sharedInstance] actualizarPiscina:self.piscina];
+}
+
 - (IBAction)turbidezWasTapped:(id)sender {
     if (self.turbidezSwitch.on == YES){
         self.turbidezLabel.text = @"Sí";
