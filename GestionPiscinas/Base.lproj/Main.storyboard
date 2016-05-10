@@ -332,6 +332,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Fecha muestreo" id="noM-MC-d3W"/>
                     <connections>
+                        <outlet property="comentarioTextView" destination="WQ5-IJ-RMG" id="5rC-cM-u9m"/>
                         <outlet property="maxDesinfectanteResidualTextField" destination="HQW-jL-zid" id="bzv-s3-12p"/>
                         <outlet property="minDesinfectanteResidualTextField" destination="zLz-ta-Bst" id="4Mx-rq-F8x"/>
                         <outlet property="pHTextField" destination="0C3-z3-b55" id="CLs-Cc-4PX"/>

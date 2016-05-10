@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UISwitch *transparenciaSwitch;
 @property (weak, nonatomic) IBOutlet UILabel *turbidezLabel;
 @property (weak, nonatomic) IBOutlet UILabel *transparenciaLabel;
+@property (weak, nonatomic) IBOutlet UITextView *comentarioTextView;
 @end
 
 @implementation ParametrosMedicionViewController
@@ -51,6 +52,8 @@
     else{
         self.transparenciaLabel.text = @"No";
     }
+    
+    self.comentarioTextView.text = self.medicion.parametros.comentario;
 }
 
 - (IBAction)turbidezWasTapped:(id)sender {

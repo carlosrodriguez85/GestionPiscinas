@@ -19,6 +19,7 @@
         self.tiempoRecirculacion = [aDecoder decodeFloatForKey:@"tiempoRecirculacion"];
         self.turbidez = [aDecoder decodeBoolForKey:@"turbidez"];
         self.transparencia = [aDecoder decodeBoolForKey:@"transparencia"];
+        self.comentario = [aDecoder decodeObjectForKey:@"comentario"];
     }
     
     return self;
@@ -31,6 +32,7 @@
     [aCoder encodeFloat:self.tiempoRecirculacion forKey:@"tiempoRecirculacion"];
     [aCoder encodeBool:self.turbidez forKey:@"turbidez"];
     [aCoder encodeBool:self.transparencia forKey:@"transparencia"];
+    [aCoder encodeObject:self.comentario forKey:@"comentario"];
 }
 
 @end

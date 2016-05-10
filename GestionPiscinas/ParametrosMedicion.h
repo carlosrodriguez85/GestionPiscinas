@@ -16,5 +16,6 @@
 @property (nonatomic, assign) float tiempoRecirculacion;
 @property (nonatomic, assign) BOOL turbidez;
 @property (nonatomic, assign) BOOL transparencia;
+@property (nonatomic, strong) NSString* comentario;
 
 @end
