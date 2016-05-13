@@ -7,6 +7,7 @@
 //
 
 #import "ExcelDataSource.h"
+#import "BRAOfficeDocumentPackage.h"
 
 @implementation ExcelDataSource
 
@@ -22,7 +23,17 @@ static ExcelDataSource* dataSource = nil;
 
 -(void)exportar:(NSArray<Piscina *>*)piscinas aFichero:(NSString *)nombreFichero
 {
+    BRAOfficeDocumentPackage* ficheroXlsx = [BRAOfficeDocumentPackage create:nombreFichero];
+    BRAOfficeDocument* documento = ficheroXlsx.workbook;
+    for (Piscina* piscina in piscinas){
+        BRAWorksheet* hoja = [documento createWorksheetNamed:piscina.nombre];
+        
+        //aquí falta el código para meter los datos de las mediciones dentro del excel
+    }
     
+    NSLog(@"%@", nombreFichero);
+    
+    [ficheroXlsx save];
 }
 
 @end
