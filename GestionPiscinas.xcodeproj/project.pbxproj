@@ -227,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				8EF95DEB1CE5DCDC00EFD328 /* xlsxReaderWriter */,
-				8EB69ADA1CE1FAFF00FC5EF7 /* GestionPiscinas.entitlements */,
 				8EDDF4111C96EA24008D05FA /* Modelo */,
 				8E4CF69B1C96DE6E008C68C9 /* AppDelegate.h */,
 				8E4CF69C1C96DE6E008C68C9 /* AppDelegate.m */,
@@ -249,6 +248,7 @@
 		8E4CF6981C96DE6E008C68C9 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				8EB69ADA1CE1FAFF00FC5EF7 /* GestionPiscinas.entitlements */,
 				8EF95E771CE5DE5300EFD328 /* libz.tbd */,
 				8E4CF6991C96DE6E008C68C9 /* main.m */,
 			);
