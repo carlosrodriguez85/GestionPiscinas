@@ -28,11 +28,15 @@ static ExcelDataSource* dataSource = nil;
     
     BRAOfficeDocumentPackage* ficheroXlsx = [BRAOfficeDocumentPackage open:pathLibroVacio];
     BRAOfficeDocument* documento = ficheroXlsx.workbook;
+    BRAWorksheet* hojaReferencia = [documento worksheetNamed:@"Hoja1"];
     for (Piscina* piscina in piscinas){
-        BRAWorksheet* hoja = [documento createWorksheetNamed:piscina.nombre];
+        BRAWorksheet* hoja = [documento createWorksheetNamed:piscina.nombre byCopyingWorksheet:hojaReferencia];
         
         //aquí falta el código para meter los datos de las mediciones dentro del excel
     }
+    
+    //eliminamos la primera pestaña, puesto que nos viene dada por el fichero libroVacio.xlsx
+    [documento removeWorksheetNamed:@"Hoja1"];
     
     NSLog(@"%@", nombreFichero);
     
