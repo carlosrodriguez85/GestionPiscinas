@@ -13,6 +13,6 @@
 
 +(instancetype)sharedInstance;
 
--(void)exportar:(NSArray<Piscina*>*)piscinas aFichero:(NSString*)nombreFichero;
+-(NSString*)exportar:(NSArray<Piscina*>*)piscinas aFichero:(NSString*)nombreFichero;
 
 @end

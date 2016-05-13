@@ -22,7 +22,7 @@ static ExcelDataSource* dataSource = nil;
     return dataSource;
 }
 
--(void)exportar:(NSArray<Piscina *>*)piscinas aFichero:(NSString *)nombreFichero
+-(NSString*)exportar:(NSArray<Piscina *>*)piscinas aFichero:(NSString *)nombreFichero
 {
     //esta línea que hay a continuación permite obtener el path a cualquier fichero que haya dentro de nuestro "Contents".
     NSString* pathLibroVacio = [[NSBundle mainBundle] pathForResource:@"libroVacio" ofType:@"xlsx"];
@@ -48,6 +48,8 @@ static ExcelDataSource* dataSource = nil;
     
     //al guardar, guardamos en el path que nos hayan pasado como parámetro (normalmente el path estará dentro de la carpeta Documents)
     [ficheroXlsx saveAs:nombreFichero];
+    
+    return nombreFichero;
 }
 
 -(void)escribirMedicion:(Medicion*)medicion enFila:(NSInteger)fila hoja:(BRAWorksheet*)hoja

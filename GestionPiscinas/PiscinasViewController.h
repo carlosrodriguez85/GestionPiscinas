@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+@import QuickLook; //esto nos permite mostrar ficheros directamente en el iphone
 
-@interface PiscinasViewController : UIViewController<UITableViewDataSource, UITableViewDelegate>
+@interface PiscinasViewController : UIViewController<UITableViewDataSource, UITableViewDelegate, QLPreviewControllerDataSource> //el último datasource se incorpora para poder previsualizar ficheros en el iphone
 
 @end

@@ -119,7 +119,10 @@
 }
 
 - (IBAction)exportarPulsado:(id)sender {
-    [[Repository sharedInstance] exportar];
+    NSString* nombreFichero = [[Repository sharedInstance] exportar];
+    
+    QLPreviewController* previewController = [[QLPreviewController alloc] init];
+    previewController.dataSource = self; //esto lo ponemos porque QLPreviewController requiere tener un datasource
 }
 
 @end
