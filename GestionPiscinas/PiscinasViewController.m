@@ -13,6 +13,8 @@
 @interface PiscinasViewController ()
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
+@property (nonatomic, strong) NSString* nombreDelFicheroExportado;
+
 @end
 
 @implementation PiscinasViewController
@@ -119,10 +121,27 @@
 }
 
 - (IBAction)exportarPulsado:(id)sender {
-    NSString* nombreFichero = [[Repository sharedInstance] exportar];
+    //hemos cambiado en el método exportar -(void) por -(NSString*). Aquí recuperamos ese valor NSString
+    self.nombreDelFicheroExportado = [[Repository sharedInstance] exportar];
     
     QLPreviewController* previewController = [[QLPreviewController alloc] init];
     previewController.dataSource = self; //esto lo ponemos porque QLPreviewController requiere tener un datasource
+    
+    //este método hay que ponerlo para que se muestre un viewcontroller desde el viewcontroller en el que estamos actualmente
+    [self presentViewController:previewController animated:YES completion:NULL];
+}
+
+#pragma mark - QLPreviewController datasource
+
+-(NSInteger)numberOfPreviewItemsInPreviewController:(QLPreviewController *)controller
+{
+    return 1;
+}
+
+-(id<QLPreviewItem>)previewController:(QLPreviewController *)controller previewItemAtIndex:(NSInteger)index
+{
+    //según la documentación, podemos devolver o un NSURL o un objeto de una clase cualquier que adopte el protocolo QLPreviewItem. Hemos optado por NSURL por comodidad.
+    return [NSURL fileURLWithPath:self.nombreDelFicheroExportado];
 }
 
 @end
