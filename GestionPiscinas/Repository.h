@@ -17,5 +17,6 @@
 -(void)actualizarPiscina:(Piscina*)piscina;
 -(void)eliminarPiscina:(Piscina*)piscina;
 -(NSArray*)obtenerPiscinas;
+-(void)exportar:(NSArray<Piscina*>*)piscinas aFichero:(NSString*)fichero;
 
 @end

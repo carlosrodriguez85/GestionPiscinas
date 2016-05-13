@@ -66,6 +66,7 @@
 		8EF95E731CE5DD5F00EFD328 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF95E6D1CE5DD5F00EFD328 /* unzip.c */; };
 		8EF95E741CE5DD5F00EFD328 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF95E6F1CE5DD5F00EFD328 /* zip.c */; };
 		8EF95E781CE5DE5300EFD328 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF95E771CE5DE5300EFD328 /* libz.tbd */; };
+		8EF95E7B1CE5E3F100EFD328 /* ExcelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF95E7A1CE5E3F100EFD328 /* ExcelDataSource.m */; };
 		8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */; };
 /* End PBXBuildFile section */
 
@@ -191,6 +192,8 @@
 		8EF95E6F1CE5DD5F00EFD328 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
 		8EF95E701CE5DD5F00EFD328 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
 		8EF95E771CE5DE5300EFD328 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		8EF95E791CE5E3F100EFD328 /* ExcelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcelDataSource.h; sourceTree = "<group>"; };
+		8EF95E7A1CE5E3F100EFD328 /* ExcelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcelDataSource.m; sourceTree = "<group>"; };
 		8EFD34CD1C9ADB3000DEC0E4 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -265,6 +268,8 @@
 				8E6CFA001CA946D50073CD65 /* PlistDataSource.m */,
 				8EB69ADB1CE1FB8700FC5EF7 /* iCloudDataSource.h */,
 				8EB69ADC1CE1FB8700FC5EF7 /* iCloudDataSource.m */,
+				8EF95E791CE5E3F100EFD328 /* ExcelDataSource.h */,
+				8EF95E7A1CE5E3F100EFD328 /* ExcelDataSource.m */,
 			);
 			name = DataSources;
 			sourceTree = "<group>";
@@ -516,6 +521,7 @@
 				8EF95E5C1CE5DD0300EFD328 /* NativeColor+OpenXML.m in Sources */,
 				8EF95E4E1CE5DD0300EFD328 /* BRAOpenXmlElement.m in Sources */,
 				8EF95E511CE5DD0300EFD328 /* BRARelationships.m in Sources */,
+				8EF95E7B1CE5E3F100EFD328 /* ExcelDataSource.m in Sources */,
 				8EF95E661CE5DD4B00EFD328 /* SSZipArchive.m in Sources */,
 				8E6CFA011CA946D50073CD65 /* PlistDataSource.m in Sources */,
 				8EB69ADD1CE1FB8700FC5EF7 /* iCloudDataSource.m in Sources */,

@@ -10,6 +10,7 @@
 #import "LocalMemoryDataSource.h"
 #import "PlistDataSource.h" //añadimos el datasource, para que entienda el repositorio que hay PlistDataSources
 #import "iCloudDataSource.h"
+#import "ExcelDataSource.h"
 
 @implementation Repository
 
@@ -98,6 +99,11 @@ static Repository* repository = nil;
     }
     
     return piscinas;
+}
+
+-(void)exportar:(NSArray<Piscina*>*)piscinas aFichero:(NSString*)fichero
+{
+    [[ExcelDataSource sharedInstance] exportar:piscinas aFichero:fichero];
 }
 
 @end
