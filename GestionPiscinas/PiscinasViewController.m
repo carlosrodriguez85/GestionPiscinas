@@ -118,4 +118,8 @@
     [self presentViewController:alertController animated:YES completion:nil]; //esta es la línea que muestra realmente el alertcontroller. sin esto, el alertcontroller no se muestra en pantalla
 }
 
+- (IBAction)exportarPulsado:(id)sender {
+    
+}
+
 @end

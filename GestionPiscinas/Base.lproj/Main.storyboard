@@ -74,6 +74,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Piscinas" id="3fF-wf-Ove">
+                        <barButtonItem key="leftBarButtonItem" title="Generar Excel" id="UTd-vt-eFM">
+                            <connections>
+                                <action selector="exportarPulsado:" destination="sim-7n-qiD" id="0Ga-xV-U0d"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qMs-ba-951">
                             <connections>
                                 <action selector="pulsarAgregarPiscina:" destination="sim-7n-qiD" id="C4D-Ai-nEm"/>
