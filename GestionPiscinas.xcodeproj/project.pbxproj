@@ -67,6 +67,7 @@
 		8EF95E741CE5DD5F00EFD328 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 8EF95E6F1CE5DD5F00EFD328 /* zip.c */; };
 		8EF95E781CE5DE5300EFD328 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8EF95E771CE5DE5300EFD328 /* libz.tbd */; };
 		8EF95E7B1CE5E3F100EFD328 /* ExcelDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EF95E7A1CE5E3F100EFD328 /* ExcelDataSource.m */; };
+		8EF95E7D1CE5ECFC00EFD328 /* libroVacio.xlsx in Resources */ = {isa = PBXBuildFile; fileRef = 8EF95E7C1CE5ECFC00EFD328 /* libroVacio.xlsx */; };
 		8EFD34CF1C9ADB3000DEC0E4 /* Repository.m in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */; };
 /* End PBXBuildFile section */
 
@@ -194,6 +195,7 @@
 		8EF95E771CE5DE5300EFD328 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		8EF95E791CE5E3F100EFD328 /* ExcelDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExcelDataSource.h; sourceTree = "<group>"; };
 		8EF95E7A1CE5E3F100EFD328 /* ExcelDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExcelDataSource.m; sourceTree = "<group>"; };
+		8EF95E7C1CE5ECFC00EFD328 /* libroVacio.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = libroVacio.xlsx; sourceTree = "<group>"; };
 		8EFD34CD1C9ADB3000DEC0E4 /* Repository.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Repository.h; sourceTree = "<group>"; };
 		8EFD34CE1C9ADB3000DEC0E4 /* Repository.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Repository.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -293,6 +295,7 @@
 		8EF95DEB1CE5DCDC00EFD328 /* xlsxReaderWriter */ = {
 			isa = PBXGroup;
 			children = (
+				8EF95E7C1CE5ECFC00EFD328 /* libroVacio.xlsx */,
 				8EF95E761CE5DD7F00EFD328 /* XMLDictionary */,
 				8EF95E751CE5DD6600EFD328 /* SSZipArchive */,
 				8EF95E671CE5DD5800EFD328 /* minizip */,
@@ -478,6 +481,7 @@
 			files = (
 				8E4CF6A81C96DE6E008C68C9 /* LaunchScreen.storyboard in Resources */,
 				8E4CF6A51C96DE6E008C68C9 /* Assets.xcassets in Resources */,
+				8EF95E7D1CE5ECFC00EFD328 /* libroVacio.xlsx in Resources */,
 				8E4CF6A31C96DE6E008C68C9 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

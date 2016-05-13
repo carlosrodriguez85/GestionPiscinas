@@ -23,7 +23,10 @@ static ExcelDataSource* dataSource = nil;
 
 -(void)exportar:(NSArray<Piscina *>*)piscinas aFichero:(NSString *)nombreFichero
 {
-    BRAOfficeDocumentPackage* ficheroXlsx = [BRAOfficeDocumentPackage create:nombreFichero];
+    //esta línea que hay a continuación permite obtener el path a cualquier fichero que haya dentro de nuestro "Contents".
+    NSString* pathLibroVacio = [[NSBundle mainBundle] pathForResource:@"libroVacio" ofType:@"xlsx"];
+    
+    BRAOfficeDocumentPackage* ficheroXlsx = [BRAOfficeDocumentPackage open:pathLibroVacio];
     BRAOfficeDocument* documento = ficheroXlsx.workbook;
     for (Piscina* piscina in piscinas){
         BRAWorksheet* hoja = [documento createWorksheetNamed:piscina.nombre];
@@ -33,7 +36,8 @@ static ExcelDataSource* dataSource = nil;
     
     NSLog(@"%@", nombreFichero);
     
-    [ficheroXlsx save];
+    //al guardar, guardamos en el path que nos hayan pasado como parámetro (normalmente el path estará dentro de la carpeta Documents)
+    [ficheroXlsx saveAs:nombreFichero];
 }
 
 @end
