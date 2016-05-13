@@ -101,9 +101,13 @@ static Repository* repository = nil;
     return piscinas;
 }
 
--(void)exportar:(NSArray<Piscina*>*)piscinas aFichero:(NSString*)fichero
-{
-    [[ExcelDataSource sharedInstance] exportar:piscinas aFichero:fichero];
+-(void)exportar {
+    NSArray* piscinas = [[Repository sharedInstance] obtenerPiscinas];
+    NSString* nombreFichero = [NSString stringWithFormat:@"exportacion.xlsx"];
+    NSString* path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) objectAtIndex:0];
+    NSString* pathCompleto = [path stringByAppendingPathComponent:nombreFichero];
+    
+    [[ExcelDataSource sharedInstance] exportar:piscinas aFichero:pathCompleto];
 }
 
 @end
