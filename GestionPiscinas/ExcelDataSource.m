@@ -54,8 +54,8 @@ static ExcelDataSource* dataSource = nil;
 
 -(void)escribirMedicion:(Medicion*)medicion enFila:(NSInteger)fila hoja:(BRAWorksheet*)hoja
 {
-    //siempre tenemos que sumar cuatro a la fila, puesto que las tres primeras filas las ocupan la cabecera
-    NSInteger filaReal = fila+4;
+    //siempre tenemos que sumar 6 a la fila, puesto que las cinco primeras filas las ocupan la cabecera
+    NSInteger filaReal = fila+6;
     
     //obtenemos una referencia a la primera celda para escribir la fecha de medición
     
